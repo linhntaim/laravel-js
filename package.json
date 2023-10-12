@@ -3,19 +3,20 @@
     "version": "1.0.0",
     "description": "To develop a Node.js web application from the scratch",
     "private": true,
+    "type": "module",
     "scripts": {
         "build": "babel ./src -d ./dist -D --delete-dir-on-start",
         "test": "nyc mocha ./tests --require @babel/register",
         "coverage": "nyc report --reporter=text-lcov | coveralls",
         "ready": "npm i && npm run build && npm test",
-        "start": "node ./bin/www"
+        "start": "node ./index.js"
     },
     "repository": {
         "type": "git",
         "url": "https://github.com/linhntaim/express-starter-starter.git"
     },
     "keywords": [
-        "package",
+        "express",
         "starter"
     ],
     "author": "Nguyen Tuan Linh <contact@linhntaim.com> (https://www.linhntaim.com)",

@@ -1,9 +1,45 @@
-var express = require('express')
-var router = express.Router()
+import {AboutController} from '../app/http/controllers/about-controller.js'
 
-/* GET home page. */
-router.get('/', function (req, res, next) {
-    res.render('index', {title: 'Express'})
-})
+export const routes = [
+    {
+        path: '/',
+        method: 'get',
+        name: 'root',
+        middlewares: [],
+        controller: function () {
 
-module.exports = router
+        },
+    },
+    {
+        path: '/about',
+        method: 'get',
+        name: 'about',
+        middlewares: [],
+        controller: [AboutController, 'about'],
+    },
+    {
+        path: '/blog',
+        name: 'blog.',
+        middlewares: [],
+        children: [
+            {
+                path: '/',
+                method: 'get',
+                name: 'root',
+                middlewares: [],
+                controller: function () {
+
+                },
+            },
+            {
+                path: '/article/:id',
+                method: 'get',
+                name: 'article',
+                middlewares: [],
+                controller: function () {
+
+                },
+            },
+        ],
+    },
+]
