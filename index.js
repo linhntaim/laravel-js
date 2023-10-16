@@ -1,4 +1,5 @@
 import {app} from './bootstrap/app.js'
-import {Kernel as KernelContract} from './lib/contracts/http/kernel.js'
+import {Kernel} from './lib/framework/contracts/http/kernel.js'
+import {RequestListener} from './lib/framework/contracts/http/request-listener.js'
 
-app.make(KernelContract).handle()
+app.make(Kernel).handle(app.make(RequestListener))
