@@ -1,5 +1,5 @@
 {
-    "name": "express-starter-starter",
+    "name": "node-js-express-starter",
     "version": "1.0.0",
     "description": "To develop a Node.js web application from the scratch",
     "private": true,
@@ -13,7 +13,7 @@
     },
     "repository": {
         "type": "git",
-        "url": "https://github.com/linhntaim/express-starter-starter.git"
+        "url": "https://github.com/linhntaim/node-js-express-starter.git"
     },
     "keywords": [
         "express",
@@ -22,9 +22,9 @@
     "author": "Nguyen Tuan Linh <contact@linhntaim.com> (https://www.linhntaim.com)",
     "license": "MIT",
     "bugs": {
-        "url": "https://github.com/linhntaim/express-starter-starter/issues"
+        "url": "https://github.com/linhntaim/node-js-express-starter/issues"
     },
-    "homepage": "https://github.com/linhntaim/express-starter-starter#readme",
+    "homepage": "https://github.com/linhntaim/node-js-express-starter#readme",
     "dependencies": {
         "cookie-parser": "^1.4.6",
         "debug": "^4.3.4",

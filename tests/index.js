@@ -10,7 +10,7 @@ const it = mocha.it
 const expect = chai.expect
 chai.should()
 
-describe('express-starter-starter', function () {
+describe('node-js-express-starter', function () {
     // before(() => {
     // })
     // beforeEach(() => {
