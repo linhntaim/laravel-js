@@ -1,3 +1,5 @@
+import {RouteServiceProvider} from '../app/providers/route-service-provider.js'
+
 export const app = app => {
     const env = app.make('env')
     return {
@@ -5,6 +7,8 @@ export const app = app => {
 
         port: env.get('PORT', 3000),
 
-        providers: [],
+        providers: [
+            RouteServiceProvider,
+        ],
     }
 }
