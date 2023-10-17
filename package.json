@@ -5,10 +5,9 @@
     "private": true,
     "type": "module",
     "scripts": {
-        "build": "babel ./src -d ./dist -D --delete-dir-on-start",
-        "test": "nyc mocha ./tests --require @babel/register",
+        "test": "nyc mocha ./tests",
         "coverage": "nyc report --reporter=text-lcov | coveralls",
-        "ready": "npm i && npm run build && npm test",
+        "ready": "npm i && npm test",
         "start": "node ./index.js"
     },
     "repository": {
@@ -17,7 +16,9 @@
     },
     "keywords": [
         "express",
-        "starter"
+        "starter",
+        "laravel",
+        "framework"
     ],
     "author": "Nguyen Tuan Linh <contact@linhntaim.com> (https://www.linhntaim.com)",
     "license": "MIT",
@@ -33,11 +34,6 @@
         "morgan": "^1.10.0"
     },
     "devDependencies": {
-        "@babel/cli": "^7.23.0",
-        "@babel/core": "^7.23.0",
-        "@babel/preset-env": "^7.22.20",
-        "@babel/register": "^7.22.15",
-        "babel-plugin-add-module-exports": "^1.0.4",
         "chai": "^4.3.10",
         "coveralls": "^3.1.1",
         "mocha": "^10.2.0",
