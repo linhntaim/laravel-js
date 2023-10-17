@@ -5,8 +5,8 @@ import cookieParser from 'cookie-parser'
 
 export class Kernel extends BaseKernel
 {
-    afterInjecting() {
-        super.afterInjecting()
+    constructor(app) {
+        super(app)
 
         this.middleware = [
             logger('dev'),
