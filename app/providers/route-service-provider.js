@@ -4,7 +4,7 @@ import {RouteServiceProvider as ServiceProvider} from '../../lib/framework/found
 export class RouteServiceProvider extends ServiceProvider
 {
     boot() {
-        this.routes(() => {
+        this._routes(() => {
             console.log(App.version())
         })
     }

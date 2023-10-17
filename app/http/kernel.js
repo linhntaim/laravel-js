@@ -8,12 +8,12 @@ export class Kernel extends BaseKernel
     constructor(app) {
         super(app)
 
-        this.middleware = [
+        this._middleware = [
             logger('dev'),
             express.json(),
             express.urlencoded({extended: false}),
             cookieParser(),
-            express.static(this.app.publicPath()),
+            express.static(this._app.publicPath()),
         ]
     }
 }
