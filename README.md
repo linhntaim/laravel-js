@@ -1,9 +1,9 @@
-# node-js-express-starter
+# @laravel-js/app
 
-[![NPM version](https://img.shields.io/npm/v/node-js-express-starter.svg?style=flat-square)](https://www.npmjs.com/package/node-js-express-starter)
-[![Travis (.org)](https://img.shields.io/travis/com/linhntaim/node-js-express-starter?style=flat-square)](https://app.travis-ci.com/github/linhntaim/node-js-express-starter)
-[![Coveralls github](https://img.shields.io/coveralls/github/linhntaim/node-js-express-starter?style=flat-square)](https://coveralls.io/github/linhntaim/node-js-express-starter)
-[![NPM](https://img.shields.io/npm/l/node-js-express-starter?style=flat-square)](https://github.com/linhntaim/node-js-express-starter/blob/master/LICENSE)
+[![NPM version](https://img.shields.io/npm/v/@laravel-js/app.svg?style=flat-square)](https://www.npmjs.com/package/@laravel-js/app)
+[![Travis (.org)](https://img.shields.io/travis/com/linhntaim/@laravel-js/app?style=flat-square)](https://app.travis-ci.com/github/linhntaim/@laravel-js/app)
+[![Coveralls github](https://img.shields.io/coveralls/github/linhntaim/@laravel-js/app?style=flat-square)](https://coveralls.io/github/linhntaim/@laravel-js/app)
+[![NPM](https://img.shields.io/npm/l/@laravel-js/app?style=flat-square)](https://github.com/linhntaim/@laravel-js/app/blob/master/LICENSE)
 
 Description.
 
@@ -19,7 +19,7 @@ Description.
 ## Installation
 
 ```bash
-npm install node-js-express-starter
+npm install @laravel-js/app
 ```
 
 ## Usage

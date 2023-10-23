@@ -10,7 +10,7 @@ const it = mocha.it
 const expect = chai.expect
 chai.should()
 
-describe('node-js-express-starter', function () {
+describe('@laravel-js/app', function () {
     // before(() => {
     // })
     // beforeEach(() => {
