@@ -1,61 +1,25 @@
-// const F = magic(class
-// {
-//     #prefix
-//
-//     constructor(prefix = '') {
-//         this.#prefix = prefix
-//     }
-//
-//     static __get() {
-//         return 'static::F'
-//     }
-//
-//     __get() {
-//         return `${this.#prefix}F`
-//     }
-//
-//     __invoke() {
-//         return `${this.#prefix}invoke`
-//     }
-// })
+import {magic} from './lib/core/classes/magic.js'
 
-import {MagicMixin} from './lib/core/classes/magic.js'
-
-const F = MagicMixin(class
+class __F
 {
-    #prefix
+    stack = []
 
-    constructor(prefix = '') {
-        this.#prefix = prefix
+    insert(value) {
+        this.stack.push(value)
+        return this
     }
 
-    static __get() {
-        return 'static::F'
+    __get(prop) {
+        if (prop === 'push') {
+            return v => this.insert(v)
+        }
+        return v => this.insert('__' + v)
     }
+}
 
-    __get() {
-        return `${this.#prefix}F`
-    }
+const F = magic(__F)
 
-    __invoke() {
-        return `${this.#prefix}invoke`
-    }
-})
+const f = new F
+f.insert(0).push(1).push(2).go(3).go(4).push(5)
 
-console.log(F.any)
-console.log(F.__static.any)
-
-console.log(F.__instance('instance1::').any)
-console.log(F.__instance('instance2::')())
-
-const f = new F('construct::')
-console.log(f.any)
-// console.log(f())
-
-console.log(F.__singleton('singleton::').any)
-console.log(F.__instance('instance1::').any)
-console.log(F.__instance('instance2::')())
-
-const fc = new F('construct::')
-console.log(fc.any)
-// console.log(fc())
+console.log(f.stack)
