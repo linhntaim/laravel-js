@@ -5,15 +5,11 @@ import cookieParser from 'cookie-parser'
 
 export class Kernel extends BaseKernel
 {
-    constructor(app) {
-        super(app)
-
-        this._middleware = [
-            logger('dev'),
-            express.json(),
-            express.urlencoded({extended: false}),
-            cookieParser(),
-            express.static(this._app.publicPath()),
-        ]
-    }
+    _middleware = [
+        logger('dev'),
+        express.json(),
+        express.urlencoded({extended: false}),
+        cookieParser(),
+        express.static(this._app.publicPath()),
+    ]
 }

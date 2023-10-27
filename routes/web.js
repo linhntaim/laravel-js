@@ -1,8 +1,8 @@
 import {Route} from '../lib/framework/support/facades/route.js'
 
-export const api = () => {
+export const web = () => {
     Route.get('/', (req, res) => {
-        console.log('api')
-        res.send('api')
+        console.log('web')
+        res.send('web')
     })
 }
