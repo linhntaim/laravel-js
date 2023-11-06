@@ -1,6 +1,6 @@
 import chai from 'chai'
 import mocha from 'mocha'
-import {hello} from '../src'
+import {hello} from '../src/index.js'
 
 // const before = mocha.after
 // const beforeEach = mocha.beforeEach
