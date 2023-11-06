@@ -4,10 +4,21 @@
     "description": "To develop a Node.js web application from the scratch",
     "private": true,
     "type": "module",
+    "module": "./src/index.js",
+    "exports": {
+        ".": {
+            "import": "./src/index.js",
+            "default": "./src/index.js"
+        },
+        "./package.json": "./package.json"
+    },
     "scripts": {
         "test": "nyc mocha ./tests",
-        "coverage": "nyc report --reporter=text-lcov | coveralls",
-        "ready": "npm i && npm test",
+        "test:report": "nyc report --reporter=text-lcov",
+        "test:publish": "npm run test:report | coveralls",
+        "ci": "npm i && npm test",
+        "cia": "npm run ci && npm run test:publish",
+        "cd": "npm run ci && npm publish",
         "start": "node ./index.js"
     },
     "repository": {

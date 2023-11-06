@@ -19,6 +19,7 @@ lerna-debug.log*
 
 # Test results
 .nyc_output
+.coveralls.yml
 coverage
 
 # Common
@@ -37,6 +38,8 @@ node_modules
 .nycrc
 .nycrc.*
 nyc.config.js
+.coveralls.yml.example
 .travis.yml
+.github
 /tests
 /src
